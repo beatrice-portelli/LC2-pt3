@@ -1,0 +1,156 @@
+    I0
+C' -> .C
+--
+C -> .E rel E
+C -> .C & C
+C -> .pred ( Es )
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+
+    I1
+C' -> C .
+C -> C .& C
+--
+
+    I2
+C -> E .rel E
+E -> E .+ E
+E -> E .* E
+--
+
+    I3
+C -> pred .( Es )
+--
+
+    I4
+E -> num .
+--
+    
+    I5
+E -> id .
+--
+    
+    I6
+E -> ( .E )
+--
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I7
+C -> C & .C
+--
+C -> .E rel E
+C -> .C & C
+C -> .pred ( Es )
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I8
+C -> E rel .E
+--
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I9
+C -> E + .E
+--
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I10
+C -> E * .E
+--
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I11
+C -> pred ( .Es )
+--
+Es -> .E
+Es -> .E , Es
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I12
+E -> ( E .)
+E -> E .+ E
+E -> E .* E
+--
+    
+    I13
+C -> C & C.
+C -> C .& C
+--
+    
+    I14
+C -> E rel E .
+E -> E .+ E
+E -> E .* E
+--
+    
+    I15
+E -> E + E .
+E -> E .+ E
+E -> E .* E
+--
+    
+    I16
+E -> E * E .
+E -> E .+ E
+E -> E .* E
+--
+    
+    I17
+C -> pred ( Es .)
+--
+    
+    I18
+Es -> E .
+Es -> E ., Es
+E -> E .+ E
+E -> E .* E
+--
+    
+    I19
+E -> ( E ) .
+--
+    
+    I20
+C -> pred ( Es ) .
+--
+    
+    I21
+Es -> E , .Es
+--
+Es -> .E
+Es -> .E , Es
+E -> .num
+E -> .id
+E -> .E + E
+E -> .E * E
+E -> .( E )
+    
+    I22
+Es -> E , Es .
+--
